@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 Welcome to #{title}! 
+    a(href="/new")
+        b New Message
+    ul(style="list-style: none")
+        each msg in messages
+            li
+                p #{msg.user}: #{msg.text}
+                small.date created at #{msg.added}

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Submit your message below!
+    form(method='POST' action='/new')
+        p username:
+        input(type='text' name='username')
+        br
+        p message:
+        input(type='text' name='mssge')
+        br
+        br
+        input(type='submit' value='Submit')
